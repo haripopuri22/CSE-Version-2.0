@@ -1,8 +1,14 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="head-box">
       <header id="header">
@@ -17,74 +23,112 @@ export default function Navbar() {
           </div>
         </div>
       </header>
-      <nav class="animenu">
-        <ul class="animenu__nav wrap">
-          <li>
-            <Link to="/" className="navbar-logo">
+      <nav className={`animenu ${isMenuOpen ? 'open' : ''}`}>
+        <div className="menu-icon" onClick={handleMenuToggle}>
+          <label for="menu-toggle" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </label>
+          <span className="menu-icon__line"></span>
+          <span className="menu-icon__line"></span>
+          <span className="menu-icon__line"></span>
+        </div>
+        <ul className="animenu__nav wrap">
+          <li className="parent-menu">
+            <Link to="/" className="icon" onClick={handleMenuToggle}>
               Home
             </Link>
           </li>
-          <li>
-            <Link to="/About">About</Link>
-            <div class="jt"></div>
-            <ul class="animenu_nav_child">
+          <li className="parent-menu">
+            <Link  to="/About" onClick={handleMenuToggle}>
+              About
+            </Link>
+            <div className="jt"></div>
+            <ul className="animenu_nav_child">
               <li>
-                <Link to="/About">Vision and Mission</Link>
+                <Link to="/About" onClick={handleMenuToggle}>
+                  Vision and Mission
+                </Link>
               </li>
               <li>
-                <Link to="/POs">POs,PEOs,PSOs</Link>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <Link to="/People">People</Link>
-          </li>
-          <li>
-            <Link to="/ResearchAreas">Research Areas</Link>
-
-            <div class="jt"></div>
-            <ul class="animenu_nav_child">
-              <li>
-                <Link to="/ResearchAreas">Areas</Link>
-              </li>
-              <li>
-                <Link to="/Project">Project</Link>
-              </li>
-              <li>
-                <Link to="/Publications">Publications</Link>
+                <Link to="/POs" onClick={handleMenuToggle}>
+                  POs, PEOs, PSOs
+                </Link>
               </li>
             </ul>
           </li>
-          <li>
-            <Link to="/Course">Student Zone</Link>
-
-            <div class="jt"></div>
-            <ul class="animenu_nav_child">
+          <li className="parent-menu">
+            <Link to="/People" onClick={handleMenuToggle}>
+              People
+            </Link>
+          </li>
+          <li className="parent-menu">
+            <Link to="/ResearchAreas" className="mobile-line-break" onClick={handleMenuToggle}>
+              Research Areas
+            </Link>
+            <div className="jt"></div>
+            <ul className="animenu_nav_child">
               <li>
-                <Link to="/Course">Course</Link>
+                <Link to="/ResearchAreas" onClick={handleMenuToggle}>
+                  Areas
+                </Link>
               </li>
               <li>
-                <Link to="/AluminiNetwork"> Alumini Newtwork</Link>
+                <Link to="/Project" onClick={handleMenuToggle}>
+                  Project
+                </Link>
               </li>
               <li>
-                <Link to="/Gallary"> Gallery</Link>
-              </li>
-              <li>
-                <Link to="/StudentSection">Student Section</Link>
-              </li>
-              <li>
-                <Link to="/Activities">Activities</Link>
+                <Link to="/Publications" onClick={handleMenuToggle}>
+                  Publications
+                </Link>
               </li>
             </ul>
           </li>
-          <li>
-            <Link to="/Placements">Placements</Link>
+          <li className="parent-menu">
+            <Link to="/Course" className="mobile-line-break" onClick={handleMenuToggle}>
+              Student Zone
+            </Link>
+            <div className="jt"></div>
+            <ul className="animenu_nav_child">
+              <li>
+                <Link to="/Course" onClick={handleMenuToggle}>
+                  Course
+                </Link>
+              </li>
+              <li>
+                <Link to="/AluminiNetwork" onClick={handleMenuToggle}>
+                  Alumni Network
+                </Link>
+              </li>
+              <li>
+                <Link to="/Gallery" onClick={handleMenuToggle}>
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link to="/StudentSection" onClick={handleMenuToggle}>
+                  Student Section
+                </Link>
+              </li>
+              <li>
+                <Link to="/Activities" onClick={handleMenuToggle}>
+                  Activities
+                </Link>
+              </li>
+            </ul>
           </li>
-          <li>
-            <Link to="/ContactUs">ContactUs</Link>
+          <li className="parent-menu">
+            <Link to="/Placements" onClick={handleMenuToggle}>
+              Placements
+            </Link>
+          </li>
+          <li className="parent-menu">
+            <Link to="/ContactUs" onClick={handleMenuToggle}>
+              Contact Us
+            </Link>
           </li>
         </ul>
       </nav>
     </div>
   );
-}
+  }
