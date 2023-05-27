@@ -1,3 +1,10 @@
+.footer {
+  background-image: url('https://i.postimg.cc/SNPkdmmT/Whats-App-Image-2023-05-27-at-13-31-25.jpg') !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+  padding: 5%;
+}
 .animenu {
   display: flex;
   align-items: center;
@@ -216,9 +223,8 @@ html {
   margin: 10px auto;
   line-height: 1.8;
 }
-/==========================================公共
-  开始=============================================/
-  .w10 {
+
+.w10 {
   width: 100%;
   margin: 0 auto;
 }
@@ -547,7 +553,7 @@ html {
 .footer-l h5,
 .footer-c h5 {
   font-size: 1.625rem;
-  color: #fff;
+  color: black;
   font-family: 'times new roman';
   padding-right: 110px;
   position: relative;
@@ -576,7 +582,7 @@ html {
 }
 .footer-l li a {
   font-size: 0.875rem;
-  color: #ccbed0;
+  color: black;
   font-family: 'times new roman';
   transition: 0.6s all;
 }
@@ -593,7 +599,7 @@ html {
 .footer-c p {
   margin-top: 1.125rem;
   font-size: 0.875rem;
-  color: #e4dfea;
+  color: black;
   font-family: 'times new roman';
 }
 .footer-c li:hover a {
