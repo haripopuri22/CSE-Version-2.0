@@ -36,6 +36,50 @@ const ContactInformation = () => {
   ];
   return (
     <>
+      <div className="chase">
+        <div className="section-header">
+          <div className="container">
+            <h2>Contact Us</h2>
+          </div>
+        </div>
+        <div className="container">
+          <div className="row">
+            <div className="contact-infos">
+              <div className="contact-info-item">
+                <div className="contact-info-icon">
+                  <i className="fas fa-home" />
+                </div>
+                <div className="contact-info-content">
+                  <h4>Address</h4>
+                  <p>
+                    4671 Sugar Camp Road,
+                    <br /> Owatonna, Minnesota, <br />
+                    55060
+                  </p>
+                </div>
+              </div>
+              <div className="contact-info-item">
+                <div className="contact-info-icon">
+                  <i className="fas fa-phone" />
+                </div>
+                <div className="contact-info-content">
+                  <h4>Phone</h4>
+                  <p>571-457-2321</p>
+                </div>
+              </div>
+              <div className="contact-info-item">
+                <div className="contact-info-icon">
+                  <i className="fas fa-envelope" />
+                </div>
+                <div className="contact-info-content">
+                  <h4>Email</h4>
+                  <p>ntamerrwael@mfano.ga</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <h1 className="consulting">ContactInformation</h1>
       <body>
         <section>
@@ -73,7 +117,7 @@ const ContactInformation = () => {
             </div>
           </div>
         </section>
-        <div className="container">
+        <div className="containers">
           <h1 className="title">Frequently Asked Questions</h1>
           <main className="accordion">
             <div className="faq-img">
