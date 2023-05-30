@@ -38,11 +38,11 @@ const ContactInformation = () => {
     <>
       <div className="chase">
         <div className="section-header">
-          <div className="container">
+          <div className="contain">
             <h2>Contact Us</h2>
           </div>
         </div>
-        <div className="container">
+        <div className="contain">
           <div className="row">
             <div className="contact-infos">
               <div className="contact-info-item">
@@ -117,7 +117,7 @@ const ContactInformation = () => {
             </div>
           </div>
         </section>
-        <div className="containers">
+        <div className="container">
           <h1 className="title">Frequently Asked Questions</h1>
           <main className="accordion">
             <div className="faq-img">
