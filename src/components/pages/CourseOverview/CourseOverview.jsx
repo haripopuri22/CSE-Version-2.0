@@ -59,6 +59,7 @@ export default function CourseOverview() {
             </ul>
           </div>
         </div>
+        <h1>COURSE</h1>
         <div className="containers">
           <div className="bloc-tabs">
             <button
@@ -74,7 +75,7 @@ export default function CourseOverview() {
               Schedule
             </button>
           </div>
-
+         
           <div className="content-tabs">
             <div
               className={
