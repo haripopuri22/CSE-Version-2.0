@@ -118,8 +118,12 @@ const ContactInformation = () => {
           </div>
         </section>
         <div className="container">
-          <h1 className="title">Frequently Asked Questions</h1>
-          <main className="accordion">
+          <div className="sub_con">
+            {' '}
+            <h1 className="title">Frequently Asked Questions</h1>
+          </div>
+
+          <div className="accordion">
             <div className="faq-img">
               <img
                 src="https://static2.medplusmart.com/live/webpwa/assets/faq-icon.3a8d3259fbfd9baa620e.svg"
@@ -155,7 +159,7 @@ const ContactInformation = () => {
                 </div>
               ))}
             </div>
-          </main>
+          </div>
         </div>
       </body>
     </>

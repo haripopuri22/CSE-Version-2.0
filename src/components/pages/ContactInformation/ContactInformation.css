@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  background: #363953;
+  background: white;
   box-shadow: 0.5rem;
   border-radius: 10px;
   overflow: hidden;
@@ -30,6 +30,12 @@
   padding: 10px;
   border-radius: 0.4rem;
   margin: 10px;
+}
+.contact-form input:hover {
+  background: white;
+}
+.contact-form textarea:hover {
+  background: white;
 }
 .contact-form textarea {
   width: 100%;
@@ -113,7 +119,7 @@
   margin: 1.4rem 0rem;
   font-size: 1.2rem;
   font-weight: 500;
-  color: rgb(252, 249, 249);
+  color: black;
 }
 
 .question-btn {
@@ -141,10 +147,23 @@
   display: inline;
 }
 
-.show-text .down-icon {
+.show-text .dowmax-n-icon {
   display: none;
 }
-
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.accordion {
+  display: flex;
+  flex-direction: row;
+}
+.question-answer {
+  color: black;
+}
+.sub_con h1 {
+  width: 700px;
+}
 @media screen and (min-width: 992px) {
   .accordion {
     width: 920px;
@@ -165,7 +184,7 @@
 
   .content-accordion {
     margin-top: 40px;
-    margin-left: 350px;
+    margin-left: 100px;
     margin-bottom: 100px;
   }
 
@@ -270,5 +289,8 @@ section {
   .contact-info {
     margin-bottom: 40px;
     width: 100%;
+  }
+  .accordion {
+    flex-direction: column;
   }
 }
